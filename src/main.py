@@ -55,7 +55,7 @@ async def on_ready():
     global ownerID
 
     async with aiohttp.ClientSession() as session:
-        result_r = await session.post("https://api.neos.com/api/userSessions",
+        result_r = await session.post("https://cloudx.azurewebsites.net/api/userSessions",
                                       headers={'Content-Type': 'application/json'},
                                       json={"username": NEOS_USERNAME, "password": NEOS_PASSWORD, "secretMachineId": NEOS_MACHINEID})
         print(result_r, file=sys.stderr)
