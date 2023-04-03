@@ -27,7 +27,7 @@ async def update():
     global ownerID
 
     async with aiohttp.ClientSession() as session:
-        result_r = await session.get(f"https://api.neos.com/api/users/{ownerID}/friends",
+        result_r = await session.get(f"https://cloudx.azurewebsites.net/api/users/{ownerID}/friends",
                                       headers={
                                             'Content-Type': 'application/json',
                                             'Authorization': token
